@@ -50,35 +50,36 @@
                 - meta-yocto (It contains reference distributions and other meta informations)
 ### Metadata
 Four categories of metadata:
-    1. Recipes (*.bb) : It describes the instructions to build a single package
-            - Recipe tasks (TODO: Write in detail)
-            - Recipe variables (TODO: Write in detail)
-    2. Configuration (*.conf): It controls overall behaviour of build process
-            - build/conf/local.conf: It specifies the build details like MACHINE, build operation, and other detials
-            - build/conf/bblayers.conf: It is used to add the layers to the yocto build environment
-    3. Classes (*.bbclass): Inheritance mechanism for common functionality
-            - Provide encapsulation and inheritance logic
-            - Abstracts common functionility and share it amongst several recipes
-            - Some important classes are:
-                1. base.bbclass (Very important) (TODO: Write in detail)
-                2. autotools.bbclass
-                3. pkgconfig.bbclass
-                4. kernel.bbclass
-                5. image.bbclass
-                6. rootfs*.bbclass
-                7. sanity.bbclass
-            - Every recipe inherits the base.bbclass automatically
-    4. PackageGroups (special *.bb): Groups packages for a filesystem image
-            - Way to group packages by functionality or common purpose
-            - recipe-cores/packagegroups/
-            - All package groups are identified by packagegroup- prefix
-            - Commonly used package groups:
-                - packagegroup-core-boot
-                - packagegroup-core-buildessential
-                - packagegroup-core-tools-debug
-                - packagegroup-core-nfs
-                - packagegroup-core-ssh-dropbear
-                - packagegroup-core-ssh-openssh
+
+1. Recipes (*.bb) : It describes the instructions to build a single package
+    - Recipe tasks (TODO: Write in detail)
+    - Recipe variables (TODO: Write in detail)
+2. Configuration (*.conf): It controls overall behaviour of build process
+    - build/conf/local.conf: It specifies the build details like MACHINE, build operation, and other detials
+    - build/conf/bblayers.conf: It is used to add the layers to the yocto build environment
+3. Classes (*.bbclass): Inheritance mechanism for common functionality
+    - Provide encapsulation and inheritance logic
+    - Abstracts common functionility and share it amongst several recipes
+    - Some important classes are:
+        - base.bbclass (Very important) (TODO: Write in detail)
+        - autotools.bbclass
+        - pkgconfig.bbclass
+        - kernel.bbclass
+        - image.bbclass
+        - rootfs*.bbclass
+        - sanity.bbclass
+    - Every recipe inherits the base.bbclass automatically
+4. PackageGroups (special *.bb): Groups packages for a filesystem image
+    - Way to group packages by functionality or common purpose
+    - recipe-cores/packagegroups/
+    - All package groups are identified by packagegroup- prefix
+    - Commonly used package groups:
+        - packagegroup-core-boot
+        - packagegroup-core-buildessential
+        - packagegroup-core-tools-debug
+        - packagegroup-core-nfs
+        - packagegroup-core-ssh-dropbear
+        - packagegroup-core-ssh-openssh
             
 
 ## Bitbake commands
