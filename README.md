@@ -85,8 +85,8 @@ Four categories of metadata:
 ## Bitbake commands
     - bitbake
     - bitbake-layers show-layers
-    
-
+    - bitbake -e {recipe} | grep ^variable  --> To read the recipe variable
+    -  
 
 
 
